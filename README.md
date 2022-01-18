@@ -17,6 +17,9 @@ Also, I used yarn and not npm (although both should work fine).
 
 Setup will require extra steps to make sure Prisma (ORM) is built and running correctly.
 
+I've uploaded an additional help video to Youtube that will hopefully help, if there's trouble:
+https://www.youtube.com/watch?v=r6d68avACPs
+
 ### `yarn`
 
 This will install dependencies.
