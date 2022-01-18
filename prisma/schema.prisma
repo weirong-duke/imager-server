@@ -8,8 +8,22 @@ datasource db {
 }
 
 model Image {
-  id   Int    @id @default(autoincrement())
-  data String
-  name String
-  size Int
+  id              Int       @id @default(autoincrement())
+  createdAt       DateTime  @default(now())
+  data            String
+  details         String?
+  fileName        String
+  lastCommentDate DateTime @default(now())
+  name            String?
+  size            Int
+  comments        Comment[]
+}
+
+model Comment {
+  id              Int      @id @default(autoincrement())
+  createdAt       DateTime @default(now())
+  body            String
+  imageId         Int
+  parentCommentId Int?
+  image           Image    @relation(fields: [imageId], references: [id])
 }
